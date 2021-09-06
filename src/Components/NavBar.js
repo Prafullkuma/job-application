@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from 'react'
 import { Link, Route } from 'react-router-dom'
 
-import { Menu, Segment ,Header} from 'semantic-ui-react'
+import { Menu ,Header} from 'semantic-ui-react'
 
 import Home from './Home'
 import ApplyForJob from './ApplyForJob'
@@ -15,7 +15,7 @@ const NavBar = (props) => {
     const [user,setUser]=useState([])
     
     const addItem=(singleUser)=>{
-        const result=[...user,singleUser]        
+        const result=[singleUser,...user]        
         setUser(result)
 
     }
@@ -53,18 +53,17 @@ const NavBar = (props) => {
                      <Link to="/applyforjob"> <Header as="h1">Apply For Job</Header></Link> 
                 </Menu.Item>
                 <Menu.Item>
-                         <Link to="/register"><Header as="h1">Register</Header></Link> 
+                         {/* <Link to="/register"><Header as="h1">Register</Header></Link>  */}
                 </Menu.Item>
                 <Menu.Item>
                         <Link to="/dashboard"><Header as="h1">DashBoard</Header></Link>
                 </Menu.Item>
                 <Menu.Item>
-                   <Link to="/login"><Header as="h1">Login</Header></Link>
+                   {/* <Link to="/login"><Header as="h1">Login</Header></Link> */}
                 </Menu.Item>
                 </Menu>
            </div>
-            
-                  
+                 
         <hr/>
 
             <Route path="/" component={Home} exact/>

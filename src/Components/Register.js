@@ -8,7 +8,7 @@ const Register = (props) => {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     
-    const [formError,setFormError]=useState({})
+    const [setFormError]=useState({})
     const error={}
     
     const handleChange=(e)=>{

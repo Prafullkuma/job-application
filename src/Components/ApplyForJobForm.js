@@ -103,30 +103,30 @@ const ApplyForJobForm = (props) => {
                     <Grid columns={2} relaxed='very' centered>
 
                     <Grid.Column style={{marginTop:'10px'}}>
-                        <p>
+                        <>
                             <Label size="large" style={{width:"400px",padding:'15px'}} > Full Name</Label> 
-                        </p>
-                        <p>
+                        </>
+                        <>
                         <Label size="large" style={{width:"400px",padding:'15px'}}>Email</Label> 
-                        </p>
-                        <p>
+                        </>
+                        <>
                         <Label size="large" style={{width:"400px",padding:'15px'}}>Contact</Label> 
-                        </p>
-                        <p>
+                        </>
+                        <>
                             <Label size="large" style={{width:"400px",padding:'15px'}}>Applying for job</Label> 
-                        </p>
-                        <p>
+                        </>
+                        <>
                         <Label size="large" style={{width:"400px",padding:'15px'}}>Experience</Label> 
                             
-                        </p>
-                        <p>
+                        </>
+                        <>
                         <Label size="large" style={{width:"400px",padding:'15px'}}>Technical Skills</Label> 
                             
-                        </p>
+                        </>
                     </Grid.Column>
 
                     <Grid.Column style={{marginTop:'10px'}}>
-                        <p>
+                        
                             <Input type="text"
                                 style={{width:'400px'}} 
                                 name="fullName" 
@@ -134,8 +134,8 @@ const ApplyForJobForm = (props) => {
                                 onChange={handleChange} 
                                 placeholder="Enter your full name"/>
                                 {formError.name && <Label basic color='red' pointing>{formError.name} </Label>}
-                        </p>
-                        <p>
+                        <br/>
+
                                 <Input type="text" 
                                     name="email" 
                                     style={{width:'400px'}}                          
@@ -143,8 +143,7 @@ const ApplyForJobForm = (props) => {
                                     onChange={handleChange} 
                                     placeholder="Enter Your Email"/><br/>
                                     {formError.email && <Label basic color='red' pointing>{formError.email} </Label>}                  
-                         </p>    
-                         <p>
+                         <br/>
 
                             <Input type="text" 
                                 name="contact" 
@@ -153,8 +152,8 @@ const ApplyForJobForm = (props) => {
                                 onChange={handleChange} 
                                 placeholder="Enter Phone number"/>
                             {formError.contact && <Label basic color='red' pointing>{formError.contact}</Label>}
-                         </p>
-                         <p>
+                            <br/>
+                        
                             <select value={job} style={{width:'400px',marginTop:'15px',padding:'10px'}} onChange={handleChange} name="job">
                                 <option value="">----Select-----</option>
                                 {
@@ -165,9 +164,7 @@ const ApplyForJobForm = (props) => {
 
                             </select>
                             {formError.job &&<Label basic color='red' pointing>{formError.job}</Label>}
-
-                         </p>
-                         <p>
+                            <br/>
                          <Input  type="text"
                                 value={experience}
 
@@ -177,13 +174,12 @@ const ApplyForJobForm = (props) => {
                                 placeholder="Enter experience[2 years,2 months]"    
                         />
                         {formError.experience && <Label basic color='red' pointing>{formError.experience}</Label>}
-                         </p>
-                         <p>
+                        <br/>
                             <TextArea value={skills}  
                                 style={{width:'400px',marginTop:'20px'}} name="skills" onChange={handleChange}>
                             </TextArea>
                             {formError.skills &&<Label basic color='red' pointing>{formError.skills}</Label>}
-                         </p>
+                            <br/>
                     </Grid.Column>
                     </Grid>
 
